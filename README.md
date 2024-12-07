@@ -20,3 +20,11 @@ post : http -f POST http://127.0.0.1:8000/studentapi/ name=Amit roll=2 city=Than
 
 put : PUT http://127.0.0.1:8000/studentapi/3/ name=Amir roll=3 city=Thane "Authorization: Token 
 26a96d65b053dc9e80c8377e21e38451c8226b3f"
+
+
+gs30 :
+http POST http://127.0.0.1:8000/gettoken/ username="superuser" password="superuser"
+
+http POST http://127.0.0.1:8000/verifytoken/ token="token string"
+
+http POST http://127.0.0.1:8000/refreshtoken/ refresh="refesh token string"
